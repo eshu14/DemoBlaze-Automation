@@ -11,7 +11,7 @@ namespace DemoBlaze_Automation.Factories
             var chromeOptions = new ChromeOptions();
 
             // Start maximised
-            chromeOptions.AddArguments("--start-maximised");
+            chromeOptions.AddArguments("--start-maximized");
 
             var chromeDriverService = ChromeDriverService.CreateDefaultService(Environment.GetEnvironmentVariable("ChromeWebDriver"));
             var chromeDriver = new ChromeDriver(chromeDriverService, chromeOptions, TimeSpan.FromSeconds(120));

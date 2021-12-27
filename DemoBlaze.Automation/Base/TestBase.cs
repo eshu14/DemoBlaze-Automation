@@ -11,7 +11,7 @@ namespace DemoBlaze_Automation.Base
     {
         public IWebDriver driver;
         public DemoBlazeStorePage demoBlazeStorePage;
-        public PlaceOrderPage placeOrderPage;
+        public ViewBasketPage viewBasketPage;
         public PaymentDetailsPage paymentDetailsPage;
     
         public TestBase(ITestOutputHelper output): base(output)
@@ -19,7 +19,7 @@ namespace DemoBlaze_Automation.Base
             driver = DriverFactory.CreateDriver();
 
             demoBlazeStorePage = new DemoBlazeStorePage(driver);
-            placeOrderPage = new PlaceOrderPage(driver);
+            viewBasketPage = new ViewBasketPage(driver);
             paymentDetailsPage = new PaymentDetailsPage(driver);
         }
 

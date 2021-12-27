@@ -2,11 +2,11 @@
 
 namespace DemoBlaze_Automation.Pages
 {
-    public class PlaceOrderPage
+    public class ViewBasketPage
     {
         public IWebDriver driver { get; }
 
-        public PlaceOrderPage(IWebDriver driver)
+        public ViewBasketPage(IWebDriver driver)
         {
             this.driver = driver;
         }

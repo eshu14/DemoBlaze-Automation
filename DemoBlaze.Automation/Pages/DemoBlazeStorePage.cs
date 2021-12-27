@@ -14,17 +14,30 @@ namespace DemoBlaze_Automation.Pages
             this.driver = driver;
         }
         
-        public void AddItemsToBasket()
+        public void AddItemsToBasket(string Item)
         {
-            LaptopSideMenu.Click();
-            LaptopSonyi7Link.Click();
+            int i;
+            if(Item.Equals("Sony vaio i7"))
+            {
+                i = 9;
+                LaptopSideMenu.Click();
+                AddItem(i);
+            }
+            else if(Item.Equals("ASUS Full HD"))
+            {
+                i= 14;
+                MonitorSideMenu.Click();
+                AddItem(i);
+            }
+
+        }
+
+        public void AddItem(int i)
+        {
+            driver.FindElement(By.CssSelector($"a[href*='idp_={i}']")).Click();
             AddToCartButton.Click();
             ConfirmAlert();
             StoreCatalogLink.Click();
-            MonitorSideMenu.Click();
-            MonitorAsusHDLink.Click();
-            AddToCartButton.Click();
-            ConfirmAlert();
         }
 
         public void ConfirmAlert()
