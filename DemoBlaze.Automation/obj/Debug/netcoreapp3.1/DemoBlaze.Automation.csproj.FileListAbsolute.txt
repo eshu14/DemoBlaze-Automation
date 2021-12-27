@@ -20,7 +20,7 @@ C:\eshu\DemoBlaze.automation\DemoBlaze.Automation\obj\Debug\netcoreapp3.1\DemoBl
 C:\eshu\DemoBlaze.automation\DemoBlaze.Automation\obj\Debug\netcoreapp3.1\DemoBlaze.Automation.AssemblyInfoInputs.cache
 C:\eshu\DemoBlaze.automation\DemoBlaze.Automation\obj\Debug\netcoreapp3.1\DemoBlaze.Automation.AssemblyInfo.cs
 C:\eshu\DemoBlaze.automation\DemoBlaze.Automation\obj\Debug\netcoreapp3.1\DemoBlaze.Automation.csproj.CoreCompileInputs.cache
-C:\eshu\DemoBlaze.automation\DemoBlaze.Automation\obj\Debug\netcoreapp3.1\DemoBlaze.Automation.csproj.CopyComplete
 C:\eshu\DemoBlaze.automation\DemoBlaze.Automation\obj\Debug\netcoreapp3.1\DemoBlaze.Automation.dll
 C:\eshu\DemoBlaze.automation\DemoBlaze.Automation\obj\Debug\netcoreapp3.1\DemoBlaze.Automation.pdb
 C:\eshu\DemoBlaze.automation\DemoBlaze.Automation\obj\Debug\netcoreapp3.1\DemoBlaze.Automation.genruntimeconfig.cache
+C:\eshu\DemoBlaze.automation\DemoBlaze.Automation\obj\Debug\netcoreapp3.1\DemoBlaze.Automation.csproj.AssemblyReference.cache
