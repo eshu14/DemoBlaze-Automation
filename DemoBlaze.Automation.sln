@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoBlaze.Automation", "DemoBlaze.Automation\DemoBlaze.Automation.csproj", "{3013A9F7-50F1-4031-ACAD-FC6E5DAACA1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoBlaze_Tests", "DemoBlaze_Tests\DemoBlaze_Tests.csproj", "{6FFE0E49-B1C7-4F2E-B942-81002C792813}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3013A9F7-50F1-4031-ACAD-FC6E5DAACA1C} = {3013A9F7-50F1-4031-ACAD-FC6E5DAACA1C}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3013A9F7-50F1-4031-ACAD-FC6E5DAACA1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3013A9F7-50F1-4031-ACAD-FC6E5DAACA1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3013A9F7-50F1-4031-ACAD-FC6E5DAACA1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3013A9F7-50F1-4031-ACAD-FC6E5DAACA1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FFE0E49-B1C7-4F2E-B942-81002C792813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FFE0E49-B1C7-4F2E-B942-81002C792813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FFE0E49-B1C7-4F2E-B942-81002C792813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FFE0E49-B1C7-4F2E-B942-81002C792813}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0340DDE0-8A21-426B-A939-FF8215D35F9B}
+	EndGlobalSection
+EndGlobal
