@@ -1,4 +1,7 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using System;
+using System.Threading;
 
 namespace DemoBlaze_Automation.Pages
 {
@@ -14,13 +17,19 @@ namespace DemoBlaze_Automation.Pages
         public bool DeleteTheItemAndConfirm()
         {
             bool result = false;
+            Thread.Sleep(1000);
             int noOfItemsInBasket = driver.FindElements(By.CssSelector("a[onclick*='deleteItem']")).Count;
-            driver.FindElement(By.CssSelector("#tbodyid>tr:nth-child(1)>td:nth-child(4)>a")).Click();
+            Console.WriteLine("noOfItemsInBasket "+noOfItemsInBasket);
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            wait.Until(driver =>  driver.FindElement(By.CssSelector("#tbodyid>tr:nth-child(1)>td:nth-child(4)>a"))).Click();
+            Thread.Sleep(1000);
             int updatedNoOfItemsInBasket = driver.FindElements(By.CssSelector("a[onclick*='deleteItem']")).Count;
-            if(updatedNoOfItemsInBasket < noOfItemsInBasket)
+            Console.WriteLine(updatedNoOfItemsInBasket);
+            if (updatedNoOfItemsInBasket < noOfItemsInBasket)
             {
                 result = true;
             }
+            Console.WriteLine(result);
             return result;
         }
 

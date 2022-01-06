@@ -16,7 +16,9 @@ namespace Demo_blaze_Tests.AddToCartTests
         public void Verify_items_added_to_the_cart_can_be_removed() 
         {
             demoBlazeStorePage.AddItemsToBasket("Sony vaio i7");
+            output.WriteLine("Sony added");
             demoBlazeStorePage.AddItemsToBasket("ASUS Full HD");
+            output.WriteLine("Asus added");
             demoBlazeStorePage.CartMenu.Click();
             viewBasketPage.DeleteTheItemAndConfirm().Should().BeTrue();
         }

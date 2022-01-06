@@ -48,8 +48,8 @@ namespace DemoBlaze_Automation.Pages
                 IAlert alert = driver.SwitchTo().Alert();
                 if (alert.Text.Contains("Product added"))
                 {
-                    Thread.Sleep(500);
-                    alert.Accept();
+                    Thread.Sleep(1000);
+                    alert.Accept(); //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
                 }
             }
             catch (Exception e)

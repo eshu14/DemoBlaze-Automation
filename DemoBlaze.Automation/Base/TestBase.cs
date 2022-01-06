@@ -13,7 +13,8 @@ namespace DemoBlaze_Automation.Base
         public DemoBlazeStorePage demoBlazeStorePage;
         public ViewBasketPage viewBasketPage;
         public PaymentDetailsPage paymentDetailsPage;
-    
+        protected readonly ITestOutputHelper output;
+
         public TestBase(ITestOutputHelper output): base(output)
         {
             driver = DriverFactory.CreateDriver();
@@ -21,6 +22,8 @@ namespace DemoBlaze_Automation.Base
             demoBlazeStorePage = new DemoBlazeStorePage(driver);
             viewBasketPage = new ViewBasketPage(driver);
             paymentDetailsPage = new PaymentDetailsPage(driver);
+
+            this.output = output;
         }
 
         public override void Dispose()
