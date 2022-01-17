@@ -14,15 +14,17 @@ namespace DemoBlaze_Automation.Pages
             this.driver = driver;
         }
 
-        public bool DeleteTheItemAndConfirm()
+        public bool DeleteTheItemAndConfirm(int itemPositionToRemove)
         {
             bool result = false;
             Thread.Sleep(1000);
             int noOfItemsInBasket = driver.FindElements(By.CssSelector("a[onclick*='deleteItem']")).Count;
             Console.WriteLine("noOfItemsInBasket "+noOfItemsInBasket);
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            wait.Until(driver =>  driver.FindElement(By.CssSelector("#tbodyid>tr:nth-child(1)>td:nth-child(4)>a"))).Click();
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(2));
+            string itemRemovedFromBasket = driver.FindElement(By.CssSelector($"#tbodyid>tr:nth-child({itemPositionToRemove})>td:nth-child(4)>a")).Text;
+            wait.Until(driver =>  driver.FindElement(By.CssSelector($"#tbodyid>tr:nth-child({itemPositionToRemove})>td:nth-child(4)>a"))).Click();
             Thread.Sleep(1000);
+            Console.WriteLine(itemRemovedFromBasket);
             int updatedNoOfItemsInBasket = driver.FindElements(By.CssSelector("a[onclick*='deleteItem']")).Count;
             Console.WriteLine(updatedNoOfItemsInBasket);
             if (updatedNoOfItemsInBasket < noOfItemsInBasket)

@@ -35,7 +35,8 @@ namespace DemoBlaze_Automation.Pages
                 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(5000);
                 if (ThankyouMessage.Displayed)
                 {
-                    ThankMessageOkButton.SendKeys(Keys.Enter);
+                    ThankMessageOkButton.Click();//.SendKeys(Keys.Enter);
+                    Thread.Sleep(2000);
                 }
             }
             catch (Exception e)

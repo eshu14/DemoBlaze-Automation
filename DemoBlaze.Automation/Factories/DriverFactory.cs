@@ -14,7 +14,7 @@ namespace DemoBlaze_Automation.Factories
             chromeOptions.AddArguments("--start-maximized");
 
             var chromeDriverService = ChromeDriverService.CreateDefaultService(Environment.GetEnvironmentVariable("ChromeWebDriver"));
-            var chromeDriver = new ChromeDriver(chromeDriverService, chromeOptions, TimeSpan.FromSeconds(120));
+            var chromeDriver = new ChromeDriver(chromeDriverService, chromeOptions);
             chromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
 
             return chromeDriver;

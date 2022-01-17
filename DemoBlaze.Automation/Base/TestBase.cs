@@ -28,7 +28,7 @@ namespace DemoBlaze_Automation.Base
 
         public override void Dispose()
         {
-            driver.Quit();
+            driver.Manage().Cookies.DeleteAllCookies();
             driver.Dispose();
         }
     }

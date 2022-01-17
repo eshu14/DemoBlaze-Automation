@@ -14,30 +14,48 @@ namespace DemoBlaze_Automation.Pages
             this.driver = driver;
         }
         
-        public void AddItemsToBasket(string Item)
+        public void AddItem(string item)
         {
-            int i;
-            if(Item.Equals("Sony vaio i7"))
+            try
             {
-                i = 9;
-                LaptopSideMenu.Click();
-                AddItem(i);
+                bool result = driver.FindElement(By.XPath($"//a[contains(.,'{item}')]")).Displayed;
+                driver.FindElement(By.XPath($"//a[contains(.,'{item}')]")).Click();
             }
-            else if(Item.Equals("ASUS Full HD"))
+            catch (Exception)
             {
-                i= 14;
-                MonitorSideMenu.Click();
-                AddItem(i);
+                NextButton.Click();
+                driver.FindElement(By.XPath($"//a[contains(.,'{item}')]")).Click();
             }
-
+            finally
+            {
+                AddToCartButton.Click();
+                ConfirmAlert();
+                StoreCatalogLink.Click();
+            }
         }
 
-        public void AddItem(int i)
+        public void AddItem(string item1, string item2)
         {
-            driver.FindElement(By.CssSelector($"a[href*='idp_={i}']")).Click();
-            AddToCartButton.Click();
-            ConfirmAlert();
-            StoreCatalogLink.Click();
+            string[] itemList = { item1, item2 };
+            foreach (string item in itemList)
+            {
+                try
+                {
+                    bool result = driver.FindElement(By.XPath($"//a[contains(.,'{item}')]")).Displayed;
+                    driver.FindElement(By.XPath($"//a[contains(.,'{item}')]")).Click();
+                }
+                catch (Exception)
+                {
+                    NextButton.Click();
+                    driver.FindElement(By.XPath($"//a[contains(.,'{item}')]")).Click();
+                }
+                finally
+                {
+                    AddToCartButton.Click();
+                    ConfirmAlert();
+                    StoreCatalogLink.Click();
+                }
+            }
         }
 
         public void ConfirmAlert()

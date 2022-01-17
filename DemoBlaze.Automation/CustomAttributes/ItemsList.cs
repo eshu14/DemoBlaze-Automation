@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DemoBlaze.Automation.Data
+namespace DemoBlaze.Automation.CustomAttributes
 {
     public class ItemsList
     {

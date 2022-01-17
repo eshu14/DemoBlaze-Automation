@@ -1,0 +1,23 @@
+{
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ],
+  "Two Items in the Basket": [
+    [ "Samsung galaxy s6", "Iphone 6 32gb",1 ],
+    [ "HTC One M9", "Nokia lumia 1520" ,2],
+    [  "2017 Dell 15.6 Inch", "MacBook air",1 ],
+    [  "Apple monitor 24", "ASUS Full HD",2 ]
+  ],
+  "Three Items in the Basket": [
+    [ "MacBook Pro", "Dell i7 8gb", "Sony vaio i7" ],
+    [ "Nokia lumia 1520", "Sony xperia z5", "Apple monitor 24" ]
+  ],
+  "Four Items in the Basket": [
+    [ "Samsung galaxy s7", "2017 Dell 15.6 Inch", "HTC One M9", "Samsung galaxy s7" ]
+  ]
+}

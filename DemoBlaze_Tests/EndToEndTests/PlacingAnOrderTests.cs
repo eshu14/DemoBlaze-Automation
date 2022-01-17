@@ -14,8 +14,8 @@ namespace Demo_blaze_Tests.EndToEndTests
         public void Verify_adding_items_to_cart_and_complete_the_order()
         {
             LaunchService();
-            demoBlazeStorePage.AddItemsToBasket("Sony vaio i7");
-            demoBlazeStorePage.AddItemsToBasket("ASUS Full HD");
+            demoBlazeStorePage.AddItem("Sony vaio i7");
+            demoBlazeStorePage.AddItem("ASUS Full HD");
             demoBlazeStorePage.CartMenu.Click();
             viewBasketPage.PlaceOrderButton.Click();
             paymentDetailsPage.EnterAndConfirmPaymentDetails().Contains("Thank you for your purchase!");
